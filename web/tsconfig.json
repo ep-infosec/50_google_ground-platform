@@ -1,0 +1,15 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "rootDir": ".",
+    "outDir": "build",
+    "lib": ["es2018", "dom"],
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "types": ["node", "jasmine"]
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"]
+}

@@ -1,0 +1,40 @@
+<!--
+  Copyright 2021 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<div fxLayout="column">
+  <ground-header-layout> </ground-header-layout>
+
+  <h1 fxFlex class="recent-surveys">All Surveys</h1>
+  <div fxFlex class="container-surveys">
+    <div class="container">
+      <mat-card (click)="onNewSurvey()" class="survey-add">
+        <mat-card-content class="card-content">
+          <mat-icon color="primary" class="title-add">add</mat-icon>
+        </mat-card-content>
+      </mat-card>
+      <mat-card
+        (click)="onSurveyClicked(i)"
+        class="survey-card"
+        *ngFor="let survey of surveys; let i = index"
+      >
+        <mat-card-header>
+          <mat-card-title class="title-survey">{{
+            survey.title
+          }}</mat-card-title>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+</div>
